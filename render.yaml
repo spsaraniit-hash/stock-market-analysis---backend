@@ -1,0 +1,8 @@
+
+services:
+  - type: web
+    name: stock-market-backend
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    healthCheckPath: /api/health
